@@ -1,7 +1,6 @@
 # CaptchaNo Go SDK — Captcha Solver API Client for Golang
 
 [![Go Reference](https://pkg.go.dev/badge/github.com/DishantSinghDev2/captchano-go.svg)](https://pkg.go.dev/github.com/DishantSinghDev2/captchano-go)
-[![CI](https://github.com/DishantSinghDev2/captchano-go/actions/workflows/ci.yml/badge.svg)](https://github.com/DishantSinghDev2/captchano-go/actions/workflows/ci.yml)
 [![Go Report Card](https://goreportcard.com/badge/github.com/DishantSinghDev2/captchano-go)](https://goreportcard.com/report/github.com/DishantSinghDev2/captchano-go)
 [![license](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
