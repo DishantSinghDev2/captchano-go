@@ -1,0 +1,18 @@
+name: Release
+# Go modules are published by the git tag itself. This workflow cuts the GitHub release
+# and asks the Go proxy to index the version so pkg.go.dev picks it up immediately.
+on:
+  push: { tags: ["v*"] }
+permissions: { contents: write }
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with: { go-version: "1.24" }
+      - run: go vet ./... && go test ./...
+      - uses: softprops/action-gh-release@v2
+        with: { generate_release_notes: true }
+      - name: Warm the Go proxy / pkg.go.dev
+        run: GOPROXY=https://proxy.golang.org GO111MODULE=on go list -m "github.com/DishantSinghDev2/captchano-go@${GITHUB_REF_NAME}"

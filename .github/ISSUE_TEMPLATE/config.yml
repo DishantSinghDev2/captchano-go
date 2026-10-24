@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: CaptchaNo support
+    url: mailto:support@captchano.com
+    about: Billing, account and solve-quality questions go to support, not GitHub issues.
+  - name: API reference
+    url: https://captchano.com/captcha-solver-api
+    about: Endpoint, field and error-code documentation.
